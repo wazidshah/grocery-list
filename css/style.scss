@@ -56,12 +56,12 @@ h1, h2, h3, h4, h5, h6 {font-family: 'Poppins', sans-serif; font-weight: 700;}
     ul{list-style: none; margin: 0px;
         li{margin-bottom: 30px;
           .wrap {padding: 20px; border-radius: 5px; position: relative; border: 2px solid #4E6649; height: 100%; }
-            .contact {display: flex; flex-direction: row;justify-content: space-between;
-                p{margin-right: 10px;  font-size: 18px; margin-bottom: 10px;}
-                .call-whatsapp { font-size: 13px; margin-bottom: 0px; margin-top: 4px;}
+            .contact {
+                p{}
+                .call-whatsapp {}
             }
-            .other-info{display: flex; flex-direction: row; max-width: 90%;
-                p{margin-right: 10px;  font-size: 13px; margin-bottom: 0px;}
+            .other-info{
+                p{}
             }
         }
     }

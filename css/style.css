@@ -118,23 +118,3 @@ h1, h2, h3, h4, h5, h6 {
         position: relative;
         border: 2px solid #4E6649;
         height: 100%; }
-      .content ul li .contact {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between; }
-        .content ul li .contact p {
-          margin-right: 10px;
-          font-size: 18px;
-          margin-bottom: 10px; }
-        .content ul li .contact .call-whatsapp {
-          font-size: 13px;
-          margin-bottom: 0px;
-          margin-top: 4px; }
-      .content ul li .other-info {
-        display: flex;
-        flex-direction: row;
-        max-width: 90%; }
-        .content ul li .other-info p {
-          margin-right: 10px;
-          font-size: 13px;
-          margin-bottom: 0px; }

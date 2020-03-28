@@ -105,15 +105,13 @@
                 <li class="cell medium-6" v-for="(contact,index) in contactList" :id="index">
                   <div class="wrap">
                     <div class="contact">
-                        <p class="call-whatsapp">
-                            Order by: <b v-if="contact.whatsapp==='no' || contact.whatsapp==='' ">Call only</b>
-                            <b v-if="contact.whatsapp==='yes'">Call only</b>
-                        </p>
-                        <h6 class="type">
-                                {{contact.type.join(", ")}}
-                        </h6>
-                        <a v-for="phone in contact.phone" :href="`tel:${phone}`" ><span>{{phone}}</span></a>
-                        
+                      <a v-for="phone in contact.phone" :href="`tel:${phone}`" ><span>{{phone}}</span></a>
+                      <h6 class="type">
+                              {{contact.type.join(", ")}}
+                      </h6>
+
+
+
                     </div>
                     <div class="other-info">
                         <p class="shop-name">
@@ -122,6 +120,10 @@
 
                         <p class="location">
                             {{contact.location}}
+                        </p>
+                        <p class="call-whatsapp">
+                            Order by: <b v-if="contact.whatsapp==='no' || contact.whatsapp==='' ">Call only</b>
+                            <b v-if="contact.whatsapp==='yes'">Call only</b>
                         </p>
                     </div>
                     <a class="more-link" v-if="contact.anyImage != '' " :href="contact.anyImage" target="_blank" rel="noopener noreferrer">More info</a>
