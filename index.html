@@ -2,18 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+    <title>Goa for you</title>
+    <meta name="title" content="Goa for you - Together we deal with the crisis ">
+    <meta name="description" content="We come together to help each other in crisis. This is one place where you can find all the approved home delivery services for your Essentials like Groceries and more. ">
+    <meta name="keywords" content="goa, covid-19, corona, goa help, goa for you">
+
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Find Govt. authorised essential stores for home delivery">
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Da+2:700|Roboto:400,700&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/app.css">
-    <title>Lockdown help!</title>
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
-    <header>
-        <div class="grid-container">
-            <h1>GOA HELP</h1>
-        </div>
+    <header id="site-header">
+      <div class="grid-container">
+        <h1><img src="img/goa-for-you-logo.svg" alt="">Goa For You</h1>
+      </div>
     </header>
     <section class="info-section">
         <div class="grid-container">
@@ -54,7 +62,8 @@
             </select>
             <div class="type-selection">
                 <input type="radio" name="type" id="all" checked value="all">
-                <label for="all">All</label>
+                <label for="all"><img src="img/grocery.svg" alt="">All</label>
+
                 <input type="radio" name="type" id="grocery" value="grocery">
                 <label for="grocery">Grocery shops</label>
                 <input type="radio" name="type" id="medical" value="medical">
@@ -87,7 +96,7 @@
                         <p class="type">
                             <b>
                                 {{contact.type}}
-                            </b> 
+                            </b>
                         </p>
                         <p class="location">
                             {{contact.location}}
@@ -97,11 +106,11 @@
                 </li>
                 <li v-if="contactList.length === 0">
                     <h2 class="text-center">No results found!</h2>
-                    <p class="text-center">To add information please 
+                    <p class="text-center">To add information please
                         <a style="color: blue; text-decoration: underline;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdIwhoXWbVNd6_ZIXTAV8lCkmLo_cwuZ8jVY6rkssdYJA4Upw/viewform?usp=sf_link">click here</a></p>
                 </li>
             </ul>
-            
+
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

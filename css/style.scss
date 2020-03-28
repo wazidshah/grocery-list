@@ -1,3 +1,4 @@
+
 $black: #282828;
 $white: #ffffff;
 
@@ -7,29 +8,36 @@ $white: #ffffff;
 
 
 
-@mixin fontBaloo {font-family: 'Baloo Da 2', cursive;}
-@mixin fontRoboto {font-family: 'Roboto', sans-serif;}
 
 
+body {font-family: 'Poppins', sans-serif; font-weight: 400;}
+h1, h2, h3, h4, h5, h6 {font-family: 'Poppins', sans-serif; font-weight: 700;}
 
-header{background-color:$black;padding:4px 0px;
-    h1 {font-size:36px; color:$white; @include fontBaloo();margin:0px;line-height: 54px;}
+#site-header{padding: 50px 0px;
+  h1 {font-size: 40px; font-weight: 700; color:#35382B;
+    img {width: 60px; position: relative; top: -5px;}
+   }
 }
 
 .info-section{padding: 30px 0px;
-    p{font-size:18px; @include fontRoboto(); margin:0px;}
+    p{font-size:18px;margin:0px;}
 }
 
 .filter-section {
-    h2{@include fontBaloo(); font-size: 36px;margin-bottom: 20px;}
-    select {border-radius:7px; border:none; box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.25);height: 45px; @include fontRoboto(); margin-bottom: 20px;}
-
+    h2{ font-size: 36px;margin-bottom: 20px;}
+    select {border-radius:7px; border:none; box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.25);height: 45px; margin-bottom: 20px;}
     .type-selection {margin-bottom: 20px;}
 
-    label {font-size: 18px; @include fontRoboto();}
-    input[type="radio"] {height:18px; width:18px;}
+    input[type='radio'] {display: none;}
 
-    .button {@include fontBaloo(); font-size: 18px; line-height: 30px; background-color: $black; border-radius: 7px; display:block;width:100%;padding: 10px 12px;
+    input[type='radio'] + label {font-size: 14px; color: #35382B; border: 2px solid #CAD48B; padding: 5px 10px; font-weight: 600; text-transform: uppercase; line-height: 20px; border-radius: 5px;
+      img {width: 20px; margin-right: 10px;}
+      &:hover { border-color: #35382B;}
+    }
+
+    input[type='radio']:checked + label {border-color: #35382B;}
+
+    .button { font-size: 18px; line-height: 30px; background-color: $black; border-radius: 7px; display:block;width:100%;padding: 10px 12px;
         &:hover, &:focus{background-color: $black;}
     }
     select option {text-transform: capitalize;}
@@ -42,14 +50,12 @@ header{background-color:$black;padding:4px 0px;
     ul{list-style: none; margin: 0px;
         li{padding: 10px 12px; box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);border-radius: 7px;margin-bottom:8px;position: relative;;
             .contact {display: flex; flex-direction: row;justify-content: space-between;
-                p{margin-right: 10px; @include fontRoboto(); font-size: 18px; margin-bottom: 10px;}
-                .call-whatsapp {@include fontRoboto(); font-size: 13px; margin-bottom: 0px; margin-top: 4px;}
+                p{margin-right: 10px;  font-size: 18px; margin-bottom: 10px;}
+                .call-whatsapp { font-size: 13px; margin-bottom: 0px; margin-top: 4px;}
             }
             .other-info{display: flex; flex-direction: row; max-width: 90%;
-                p{margin-right: 10px; @include fontRoboto(); font-size: 13px; margin-bottom: 0px;}
+                p{margin-right: 10px;  font-size: 13px; margin-bottom: 0px;}
             }
         }
     }
-
-    .more-link {position: absolute; right: 20px; bottom: 10px; color: blue;}
 }
