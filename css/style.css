@@ -118,10 +118,15 @@ h1, h2, h3, h4, h5, h6 {
         position: relative;
         border: 2px solid #4E6649;
         height: 100%; }
+        .content ul li .wrap img {
+          width: 20px;
+          position: relative;
+          top: -2px;
+          margin-right: 5px; }
       .content ul li .contact a {
-        font-size: 30px;
+        font-size: 24px;
         font-weight: 700;
         color: #4E6649;
-        line-height: 30px;
+        line-height: 24px;
         display: block;
         margin-bottom: 10px; }

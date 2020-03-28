@@ -118,9 +118,7 @@
                             {{contact.shopName}}
                         </p>
 
-                        <p class="location">
-                            {{contact.location}}
-                        </p>
+                        <p class="location"><img src="img/location.svg" alt="">{{contact.location}}</p>
                         <p class="call-whatsapp">
                             Order by: <b v-if="contact.whatsapp==='no' || contact.whatsapp==='' ">Call only</b>
                             <b v-if="contact.whatsapp==='yes'">Call only</b>
