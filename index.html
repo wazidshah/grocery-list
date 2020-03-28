@@ -57,6 +57,8 @@
                 <label for="medical">Medical shops</label>
                 <input type="radio" name="type" id="milk" value="milk">
                 <label for="milk">Milk shops</label>
+                <input type="radio" name="type" id="vegetables" value="vegetables">
+                <label for="vegetables">vegetable shops</label>
             </div>
             <button id="filter" class="button">FILTER</button>
         </div>
@@ -66,7 +68,7 @@
             <ul id="contact-list">
                 <li v-for="(contact,index) in contactList" :id="index">
                     <div class="contact">
-                        <a href="#" ><p>{{contact.phone}}</p></a>
+                        <a :href="`tel:${contact.phone}`" ><p>{{contact.phone}}</p></a>
                         <p class="call-whatsapp">
                             Order by: <b v-if="contact.whatsapp==='no' || contact.whatsapp==='' ">Call only</b>
                             <b v-if="contact.whatsapp==='yes'">Call only</b>
