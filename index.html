@@ -59,6 +59,8 @@
                 <label for="milk">Milk shops</label>
                 <input type="radio" name="type" id="vegetables" value="vegetables">
                 <label for="vegetables">vegetable shops</label>
+                <input type="radio" name="type" id="fish" value="fish">
+                <label for="fish">Fish vendors</label>
             </div>
             <button id="filter" class="button">FILTER</button>
         </div>
@@ -79,7 +81,9 @@
                             {{contact.shopName}}
                         </p>
                         <p class="type">
-                            {{contact.type}}
+                            <b>
+                                {{contact.type}}
+                            </b> 
                         </p>
                         <p class="location">
                             {{contact.location}}
