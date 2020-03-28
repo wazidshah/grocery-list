@@ -57,6 +57,7 @@ h1, h2, h3, h4, h5, h6 {font-family: 'Poppins', sans-serif; font-weight: 700;}
         li{margin-bottom: 30px;
           .wrap {padding: 20px; border-radius: 5px; position: relative; border: 2px solid #4E6649; height: 100%; }
             .contact {
+              a {font-size: 30px; font-weight: 700; color: #4E6649; line-height: 30px; display: block; margin-bottom: 10px;}
                 p{}
                 .call-whatsapp {}
             }
