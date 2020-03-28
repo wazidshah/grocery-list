@@ -7,31 +7,40 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700; }
 
 #site-header {
-  padding: 50px 0px; }
+  padding: 50px 0px;
+  background: #fbfdc9;
+  margin-bottom: 50px; }
   #site-header h1 {
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 700;
     color: #35382B; }
     #site-header h1 img {
-      width: 60px;
+      width: 80px;
       position: relative;
-      top: -5px; }
+      top: -5px;
+      margin-right: 10px; }
+  #site-header h6 {
+    margin-bottom: 20px; }
+  #site-header .button {
+    margin: 0px; }
 
 .info-section {
-  padding: 30px 0px; }
+  padding: 0px 0px; }
   .info-section p {
-    font-size: 18px;
-    margin: 0px; }
+    font-size: 14px;
+    margin: 0px;
+    max-width: 400px; }
 
 .filter-section h2 {
   font-size: 36px;
   margin-bottom: 20px; }
 
 .filter-section select {
-  border-radius: 7px;
+  border-radius: 5px;
   border: none;
-  box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.25);
-  height: 45px;
+  border: 2px solid #CAD48B;
+  box-shadow: none;
+  height: 40px;
   margin-bottom: 20px; }
 
 .filter-section .type-selection {
@@ -44,19 +53,25 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 14px;
   color: #35382B;
   border: 2px solid #CAD48B;
-  padding: 5px 10px;
+  padding: 7px 10px 5px;
   font-weight: 600;
   text-transform: uppercase;
   line-height: 20px;
-  border-radius: 5px; }
+  border-radius: 5px;
+  margin-left: 0px;
+  margin-right: 10px; }
   .filter-section input[type='radio'] + label img {
-    width: 20px;
-    margin-right: 10px; }
+    height: 20px;
+    width: auto;
+    margin-right: 5px;
+    position: relative;
+    top: -2px; }
   .filter-section input[type='radio'] + label:hover {
     border-color: #35382B; }
 
 .filter-section input[type='radio']:checked + label {
-  border-color: #35382B; }
+  border-color: #35382B;
+  background: #fbfcc9; }
 
 .filter-section .button {
   font-size: 18px;
@@ -82,11 +97,11 @@ h1, h2, h3, h4, h5, h6 {
     list-style: none;
     margin: 0px; }
     .content ul li {
-      padding: 10px 12px;
-      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
-      border-radius: 7px;
-      margin-bottom: 8px;
-      position: relative; }
+      padding: 20px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      position: relative;
+      border: 2px solid #4E6649; }
       .content ul li .contact {
         display: flex;
         flex-direction: row;

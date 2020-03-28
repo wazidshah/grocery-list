@@ -20,18 +20,25 @@
 <body>
     <header id="site-header">
       <div class="grid-container">
-        <h1><img src="img/goa-for-you-logo.svg" alt="">Goa For You</h1>
+        <div class="grid-x grid-padding-x">
+          <div class="cell medium-6">
+            <h1><img src="img/goa-for-you-logo.svg" alt="">Goa For You</h1>
+          </div>
+          <div class="cell medium-6">
+            <p>With the current pandemic panic across the world, your safety is our major concern.
+“Goa for you” is a crowdsourced social welfare benefit initiative for the people by the people of Goa. A quick search portal to locate the nearest home delivery service for your daily essentials in terms of groceries and other basic requirements. This initiative is taken in concern with the ongoing pandemic situation with respect to combat to eradicate the further transmission of Covid-19 across Goa and across India.
+While we promise your basic requirements delivered safely at home, you promise us to stay home.</p>
+<h6>#StaySafeStayHome</h6>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdIwhoXWbVNd6_ZIXTAV8lCkmLo_cwuZ8jVY6rkssdYJA4Upw/viewform?usp=sf_link" class="button" target="_blank">Contribute to this listing</a>
+          </div>
+        </div>
       </div>
     </header>
-    <section class="info-section">
-        <div class="grid-container">
-            <p>Find Govt. authorised essential stores for home delivery</p>
-            <p>To contribute to this listings please fill the <a href="https://docs.google.com/forms/d/e/1FAIpQLSdIwhoXWbVNd6_ZIXTAV8lCkmLo_cwuZ8jVY6rkssdYJA4Upw/viewform?usp=sf_link" target="_blank">form</a></p>
-        </div>
-    </section>
+
+
     <section class="filter-section">
         <div class="grid-container">
-            <h2>FILTER</h2>
+            <h6>Filter by Location</h6>
             <select name="areas" id="areas">
                 <option value="">Select your area</option>
                 <option value="aldona">Aldona</option>
@@ -62,18 +69,22 @@
             </select>
             <div class="type-selection">
                 <input type="radio" name="type" id="all" checked value="all">
-                <label for="all"><img src="img/grocery.svg" alt="">All</label>
+                <label for="all"><img src="img/all.svg" alt="">All</label>
 
                 <input type="radio" name="type" id="grocery" value="grocery">
-                <label for="grocery">Grocery shops</label>
+                <label for="grocery"><img src="img/grocery.svg" alt="">Grocery Shops</label>
+
                 <input type="radio" name="type" id="medical" value="medical">
-                <label for="medical">Medical shops</label>
+                <label for="medical"><img src="img/medical.svg" alt="">Medical Shops</label>
+
                 <input type="radio" name="type" id="milk" value="milk">
-                <label for="milk">Milk shops</label>
+                <label for="milk"><img src="img/milk.svg" alt="">Milk Shops</label>
+
                 <input type="radio" name="type" id="vegetables" value="vegetables">
-                <label for="vegetables">vegetable shops</label>
+                <label for="vegetables"><img src="img/vegitable.svg" alt="">Vegetable Shops</label>
+
                 <input type="radio" name="type" id="fish" value="fish">
-                <label for="fish">Fish vendors</label>
+                <label for="fish"><img src="img/fish.svg" alt="">Fish Vendors</label>
             </div>
             <!-- <button id="filter" class="button">FILTER</button> -->
         </div>
