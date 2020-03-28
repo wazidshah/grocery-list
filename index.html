@@ -91,8 +91,8 @@ While we promise your basic requirements delivered safely at home, you promise u
     </section>
     <section class="content">
         <div class="grid-container">
-            <ul id="contact-list">
-                <li v-for="(contact,index) in contactList" :id="index">
+            <ul id="contact-list" class="grid-x grid-padding-x">
+                <li class="cell medium-6" v-for="(contact,index) in contactList" :id="index">
                     <div class="contact">
                         <a style="color: blue; text-decoration: underline;" :href="`tel:${contact.phone}`" ><p>{{contact.phone}}</p></a>
                         <p class="call-whatsapp">
