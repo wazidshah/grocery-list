@@ -32,11 +32,11 @@ h1, h2, h3, h4, h5, h6 {font-family: 'Poppins', sans-serif; font-weight: 700;}
 .filter-section {
     h2{ font-size: 36px;margin-bottom: 20px;}
     select {border-radius:5px; border:none; border: 2px solid #CAD48B; box-shadow: none; height: 40px; margin-bottom: 20px;}
-    .type-selection {margin-bottom: 20px;}
+    .type-selection {margin-bottom: 20px; display: flex;}
 
     input[type='radio'] {display: none;}
 
-    input[type='radio'] + label {font-size: 14px; color: #35382B; border: 2px solid #CAD48B; padding: 7px 10px 5px; font-weight: 600; text-transform: uppercase; line-height: 20px; border-radius: 5px; margin-left: 0px; margin-right: 10px; margin-bottom: 10px;
+    input[type='radio'] + label {font-size: 14px; color: #35382B; border: 2px solid #CAD48B; padding: 7px 10px 5px; font-weight: 600; text-transform: uppercase; line-height: 20px; border-radius: 5px; margin-left: 0px; margin-right: 10px; margin-bottom: 10px; height: 40px; flex: auto;
       img {height: 20px; width: auto; margin-right: 5px; position:relative; top: -2px;}
       &:hover { border-color: #35382B;}
     }
@@ -54,7 +54,8 @@ h1, h2, h3, h4, h5, h6 {font-family: 'Poppins', sans-serif; font-weight: 700;}
         &:hover, &:active, &:focus{color: $black;}
     }
     ul{list-style: none; margin: 0px;
-        li{padding: 20px; border-radius: 5px; margin-bottom:20px;position: relative; border: 2px solid #4E6649;
+        li{margin-bottom: 30px;
+          .wrap {padding: 20px; border-radius: 5px; position: relative; border: 2px solid #4E6649; height: 100%; }
             .contact {display: flex; flex-direction: row;justify-content: space-between;
                 p{margin-right: 10px;  font-size: 18px; margin-bottom: 10px;}
                 .call-whatsapp { font-size: 13px; margin-bottom: 0px; margin-top: 4px;}

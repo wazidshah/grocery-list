@@ -25,9 +25,7 @@
             <h1><img src="img/goa-for-you-logo.svg" alt="">Goa For You</h1>
           </div>
           <div class="cell medium-6">
-            <p>With the current pandemic panic across the world, your safety is our major concern.
-“Goa for you” is a crowdsourced social welfare benefit initiative for the people by the people of Goa. A quick search portal to locate the nearest home delivery service for your daily essentials in terms of groceries and other basic requirements. This initiative is taken in concern with the ongoing pandemic situation with respect to combat to eradicate the further transmission of Covid-19 across Goa and across India.
-While we promise your basic requirements delivered safely at home, you promise us to stay home.</p>
+            <p><strong>Goa for you</strong> is a crowdsourced social welfare benefit initiative. A listing website to locate the nearest home delivery service for your daily essentials in terms of groceries and other basic requirements.</p>
 <h6><a href="https://docs.google.com/forms/d/e/1FAIpQLSdIwhoXWbVNd6_ZIXTAV8lCkmLo_cwuZ8jVY6rkssdYJA4Upw/viewform?usp=sf_link" class="" target="_blank"><img src="img/list.svg" alt="">Contribute to this listing</a> #StaySafeStayHome</h6>
 
           </div>
@@ -38,6 +36,8 @@ While we promise your basic requirements delivered safely at home, you promise u
 
     <section class="filter-section">
         <div class="grid-container">
+          <div class="grid-x grid-padding-x">
+            <div class="cell medium-2">
             <h6>Filter by Location</h6>
             <select name="areas" id="areas">
                 <option value="">Select your area</option>
@@ -68,6 +68,12 @@ While we promise your basic requirements delivered safely at home, you promise u
                 <option value="vasco">vasco</option>
                 <option value="verna">verna</option>
             </select>
+          </div>
+
+            <div class="cell medium-10">
+
+            <h6>Filter by commodity</h6>
+
             <div class="type-selection">
                 <input type="radio" name="type" id="all" checked value="all">
                 <label for="all"><img src="img/all.svg" alt="">All</label>
@@ -87,6 +93,9 @@ While we promise your basic requirements delivered safely at home, you promise u
                 <input type="radio" name="type" id="fish" value="fish">
                 <label for="fish"><img src="img/fish.svg" alt="">Fish Vendors</label>
             </div>
+
+          </div>
+          </div>
             <!-- <button id="filter" class="button">FILTER</button> -->
         </div>
     </section>
@@ -94,27 +103,29 @@ While we promise your basic requirements delivered safely at home, you promise u
         <div class="grid-container">
             <ul id="contact-list" class="grid-x grid-padding-x">
                 <li class="cell medium-6" v-for="(contact,index) in contactList" :id="index">
+                  <div class="wrap">
                     <div class="contact">
-                        <a style="color: blue; text-decoration: underline;" v-for="phone in contact.phone" :href="`tel:${phone}`" ><p>{{phone}}</p></a>
                         <p class="call-whatsapp">
                             Order by: <b v-if="contact.whatsapp==='no' || contact.whatsapp==='' ">Call only</b>
                             <b v-if="contact.whatsapp==='yes'">Call only</b>
                         </p>
+                        <h6 class="type">
+                                {{contact.type.join(", ")}}
+                        </h6>
+                        <a v-for="phone in contact.phone" :href="`tel:${phone}`" ><span>{{phone}}</span></a>
+                        
                     </div>
                     <div class="other-info">
                         <p class="shop-name">
                             {{contact.shopName}}
                         </p>
-                        <p class="type">
-                            <b>
-                                {{contact.type.join(", ")}}
-                            </b>
-                        </p>
+
                         <p class="location">
                             {{contact.location}}
                         </p>
                     </div>
                     <a class="more-link" v-if="contact.anyImage != '' " :href="contact.anyImage" target="_blank" rel="noopener noreferrer">More info</a>
+                  </div><!-- Wrap -->
                 </li>
                 <li v-if="contactList.length === 0">
                     <h2 class="text-center">No results found!</h2>

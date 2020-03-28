@@ -58,6 +58,17 @@
 		"oAP": "/data-migration-script/data.csv",
 		"oF": 0
 		},
+	"/data-migration-script/data.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/data-migration-script/data-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/data-migration-script/index.js": {
 		"bF": 0,
 		"ft": 64,
@@ -68,6 +79,12 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"/data-migration-script/node_modules": {
+		"ft": 65536,
+		"oA": 2,
+		"oAP": "/build/data-migration-script/node_modules",
+		"oF": 0
 		},
 	"/data-migration-script/package-lock.json": {
 		"ft": 524288,
@@ -200,6 +217,17 @@
 		"oAP": "/index.html",
 		"oF": 0
 		},
+	"/js/__data.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/js/__data-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/js/app.js": {
 		"bF": 0,
 		"ft": 64,
@@ -218,6 +246,17 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/js/data-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/js/data_2.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/data_2-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
