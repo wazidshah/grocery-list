@@ -112,6 +112,26 @@
 		"oAP": "/form.html",
 		"oF": 0
 		},
+	"/img/goa-for-you-logo.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/img/goa-for-you-logo.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/img/grocery.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/img/grocery.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/index.html": {
 		"cB": 0,
 		"ft": 8192,
