@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Da+2:700|Roboto:400,700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/app.css">
+    <title>Lockdown help!</title>
+</head>
+<body>
+    <header>
+        <div class="grid-container">
+            <h1>NO NAME</h1>
+        </div>
+    </header>
+    <section class="info-section">
+        <div class="grid-container">
+            <p>Find Govt. authorised home delivery grocery shops and medical stores near you</p>
+        </div>
+    </section>
+    <section class="filter-section">
+        <div class="grid-container">
+            <h2>FILTER</h2>
+            <select name="areas" id="areas">
+                <option value="">Select your area</option>
+                <option value="aldona">Aldona</option>
+                <option value="bicholim">Bicholim</option>
+                <option value="canca">Canca</option>
+                <option value="candolim">Candolim</option>
+                <option value="donapaul">Donapaul</option>
+                <option value="fatorda">Fatorda</option>
+                <option value="mapusa">mapusa</option>
+                <option value="mardol">mardol</option>
+                <option value="margao">margao</option>
+                <option value="miramar">miramar</option>
+                <option value="morjim">morjim</option>
+                <option value="nagoa">nagoa</option>
+                <option value="netravali">netravali</option>
+                <option value="panaji">panaji</option>
+                <option value="ponda">ponda</option>
+                <option value="porvorim">porvorim</option>
+                <option value="sanguem">sanguem</option>
+                <option value="sanquelim">sanquelim</option>
+                <option value="sanvordem">Sanvordem</option>
+                <option value="shiroda">shiroda</option>
+                <option value="succoro">succoro</option>
+                <option value="usgao">usgao</option>
+                <option value="valpoi">valpoi</option>
+                <option value="vasco">vasco</option>
+                <option value="verna">verna</option>
+            </select>
+            <div class="type-selection">
+                <input type="radio" name="type" id="grocery" checked value="grocery">
+                <label for="grocery">Grocery shops</label>
+                <input type="radio" name="type" id="medical" value="medical">
+                <label for="medical">Medical shops</label>
+                <input type="radio" name="type" id="milk" value="milk">
+                <label for="milk">Milk shops</label>
+            </div>
+            <button id="filter" class="button">FILTER</button>
+        </div>
+    </section>
+    <section class="content">
+        <div class="grid-container">
+            <ul id="contact-list">
+                <li v-for="(contact,index) in contactList" :id="index">
+                    <div class="contact">
+                        <a href="#" ><p>{{contact.phone}}</p></a>
+                        <p class="call-whatsapp">
+                            Order by: <b v-if="contact.whatsapp==='no' || contact.whatsapp==='' ">Call only</b>
+                            <b v-if="contact.whatsapp==='yes'">Call only</b>
+                        </p>
+                    </div>
+                    <div class="other-info">
+                        <p class="shop-name">
+                            {{contact.shopName}}
+                        </p>
+                        <p class="type">
+                            {{contact.type}}
+                        </p>
+                        <p class="location">
+                            {{contact.location}}
+                        </p>
+                    </div>
+                    <a class="more-link" v-if="contact.anyImage != '' " :href="contact.anyImage" target="_blank" rel="noopener noreferrer">More info</a>
+                </li>
+                <li v-if="contactList.length === 0">
+                    <h2 class="text-center">No results found!</h2>
+                    <p class="text-center">To add information please contact us!</p>
+                </li>
+            </ul>
+            
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@5.0.10-beta/dist/fuse.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
