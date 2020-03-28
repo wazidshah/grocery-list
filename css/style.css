@@ -123,6 +123,8 @@ h1, h2, h3, h4, h5, h6 {
           position: relative;
           top: -2px;
           margin-right: 5px; }
+        .content ul li .wrap p {
+          margin: 0px; }
       .content ul li .contact a {
         font-size: 24px;
         font-weight: 700;
@@ -130,3 +132,25 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 24px;
         display: block;
         margin-bottom: 10px; }
+
+@media screen and (max-width: 640px) {
+  #site-header {
+    padding: 30px 0px;
+    margin-bottom: 30px; }
+  #site-header h1 {
+    font-size: 30px; }
+  #site-header h1 img {
+    width: 50px;
+    top: -3px;
+    margin-right: 5px; }
+  #site-header h6 {
+    margin: 0px; }
+  .filter-section .type-selection {
+    display: block; }
+  .content ul li .wrap {
+    padding: 15px; }
+  .content ul li .contact a {
+    font-size: 20px;
+    margin-bottom: 5px; }
+  .content ul li .wrap p {
+    font-size: 14px; } }
