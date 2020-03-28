@@ -17,7 +17,11 @@ h1, h2, h3, h4, h5, h6 {font-family: 'Poppins', sans-serif; font-weight: 700;}
   h1 {font-size: 50px; font-weight: 700; color:#35382B;
     img {width: 80px; position: relative; top: -5px; margin-right: 10px;}
    }
-   h6 {margin-bottom: 20px;}
+   h6 {margin-bottom: 20px; color: #35382B;
+     a {color: #35382B; text-decoration: underline; margin-right: 20px;
+       img {width: 24px; margin-right: 5px; position: relative; top: -2px;}
+     }
+   }
    .button {margin: 0px;}
 }
 

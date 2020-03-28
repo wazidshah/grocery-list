@@ -20,7 +20,17 @@ h1, h2, h3, h4, h5, h6 {
       top: -5px;
       margin-right: 10px; }
   #site-header h6 {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    color: #35382B; }
+    #site-header h6 a {
+      color: #35382B;
+      text-decoration: underline;
+      margin-right: 20px; }
+      #site-header h6 a img {
+        width: 24px;
+        margin-right: 5px;
+        position: relative;
+        top: -2px; }
   #site-header .button {
     margin: 0px; }
 
