@@ -48,6 +48,7 @@ While we promise your basic requirements delivered safely at home, you promise u
                 <option value="donapaul">Donapaul</option>
                 <option value="fatorda">Fatorda</option>
                 <option value="mapusa">mapusa</option>
+                <option value="marcela">Marcela</option>
                 <option value="mardol">mardol</option>
                 <option value="margao">margao</option>
                 <option value="miramar">miramar</option>
@@ -94,7 +95,7 @@ While we promise your basic requirements delivered safely at home, you promise u
             <ul id="contact-list" class="grid-x grid-padding-x">
                 <li class="cell medium-6" v-for="(contact,index) in contactList" :id="index">
                     <div class="contact">
-                        <a style="color: blue; text-decoration: underline;" :href="`tel:${contact.phone}`" ><p>{{contact.phone}}</p></a>
+                        <a style="color: blue; text-decoration: underline;" v-for="phone in contact.phone" :href="`tel:${phone}`" ><p>{{phone}}</p></a>
                         <p class="call-whatsapp">
                             Order by: <b v-if="contact.whatsapp==='no' || contact.whatsapp==='' ">Call only</b>
                             <b v-if="contact.whatsapp==='yes'">Call only</b>
@@ -106,7 +107,7 @@ While we promise your basic requirements delivered safely at home, you promise u
                         </p>
                         <p class="type">
                             <b>
-                                {{contact.type}}
+                                {{contact.type.join(", ")}}
                             </b>
                         </p>
                         <p class="location">

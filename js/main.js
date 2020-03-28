@@ -129,12 +129,12 @@
                 ]
             };
     
-            let data = [...list.contactList];
+            let data = [...dataList];
             let typeFiltered = "";
             if(type != "all")
             {
                 typeFiltered = data.filter(function(element){
-                    if(type==element.type)
+                    if(element.type.includes(type))
                     {
                         return true;
                     }
@@ -177,12 +177,12 @@
                 }
                 if(e.target.checked)
                 {
-                    let data = [...list.contactList];
+                    let data = [...dataList];
                     let typeFiltered = "";
                     if(type != "all")
                     {
                         typeFiltered = data.filter(function(element){
-                            if(type==element.type)
+                            if(element.type.includes(type))
                             {
                                 return true;
                             }
