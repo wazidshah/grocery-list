@@ -74,7 +74,7 @@
             <ul id="contact-list">
                 <li v-for="(contact,index) in contactList" :id="index">
                     <div class="contact">
-                        <a :href="`tel:${contact.phone}`" ><p>{{contact.phone}}</p></a>
+                        <a style="color: blue; text-decoration: underline;" :href="`tel:${contact.phone}`" ><p>{{contact.phone}}</p></a>
                         <p class="call-whatsapp">
                             Order by: <b v-if="contact.whatsapp==='no' || contact.whatsapp==='' ">Call only</b>
                             <b v-if="contact.whatsapp==='yes'">Call only</b>
