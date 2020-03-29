@@ -1,3 +1,10 @@
+document.addEventListener("DOMContentLoaded", function() {
+  d3.csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vTTUD7zK1YRnkzoaVoD33VGMUywCaFhS9gRZXa2_SAEb5PnIne7YWxWqy8k1vYvdc5ocT75_KleDmSX/pub?gid=0&single=true&output=csv').then(function (data) {
+    dataList = data.map(d => {
+      d['phone'] = d['phone'].split('/').map(n => n.trim());
+      d['type'] = d['type'].split('/').map(n => n.trim());
+      return d;
+    })
 
   const list = new Vue({
     "el": "#contact-list",
@@ -18,7 +25,7 @@
                     "location"
                 ]
             };
-    
+
             let data = [...dataList];
             let typeFiltered = "";
             if(type != "all")
@@ -28,7 +35,7 @@
                     {
                         return true;
                     }
-            
+
                     return false;
                 });
             }
@@ -36,21 +43,21 @@
             {
                 typeFiltered = [...dataList];
             }
-    
+
             var filteredData = new Fuse(typeFiltered,options);
-    
+
             var result = filteredData.search(`'${areas.value}`)
-    
+
             var finalResult = result.map(function(res){
                 return res.item;
             });
-    
+
             list.contactList = [...finalResult];
       });
 
         //for radio buttons
         let radios = document.querySelectorAll("input[name='type']");
-        
+
         radios.forEach(function(radio){
             radio.addEventListener("click",function(e){
                 let type = e.target.value;
@@ -76,7 +83,7 @@
                             {
                                 return true;
                             }
-                    
+
                             return false;
                         });
                     }
@@ -86,13 +93,13 @@
                     }
 
                     var filteredData = new Fuse(typeFiltered,options);
-    
+
                     var result = filteredData.search(`'${areas.value}`)
-            
+
                     var finalResult = result.map(function(res){
                         return res.item;
                     });
-            
+
                     list.contactList = [...finalResult];
                 }
             })
@@ -105,7 +112,7 @@
   const grocery = document.getElementById("grocery");
   const medical = document.getElementById("medical");
 
-  
+
 
   filterButton.addEventListener("click",function(e){
     e.preventDefault();
@@ -145,3 +152,5 @@
     list.contactList = [...finalResult];
     console.log(finalResult);
   });
+ });
+});
