@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Goa for you - Volunteers list</title>
+    <meta name="title" content="Goa for you - Together we deal with the crisis ">
+    <meta name="description" content="We come together to help each other in crisis. This is one place where you can find all the approved home delivery services for your Essentials like Groceries and more. ">
+    <meta name="keywords" content="goa, covid-19, corona, goa help, goa for you">
+
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="Goa for you - Together we deal with the crisis" />
+    <meta property="og:url" content="https://goaforyou.in" />
+    <meta property="og:image" content="https://goaforyou.in/img/screenshot.png" />
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129808010-2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-129808010-2');
+    </script>
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <header id="site-header">
+      <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+          <div class="cell medium-6">
+            <h1><img src="img/goa-for-you-logo.svg" alt="">Goa For You</h1>
+          </div>
+          <div class="cell medium-6">
+            <p><strong>Goa for you</strong> is a crowdsourced social welfare benefit initiative. A listing website to locate the nearest home delivery service for your daily essentials in terms of groceries and other basic requirements.</p>
+            <h6><a href="https://docs.google.com/forms/d/e/1FAIpQLSdIwhoXWbVNd6_ZIXTAV8lCkmLo_cwuZ8jVY6rkssdYJA4Upw/viewform?usp=sf_link" class="" target="_blank"><img src="img/list.svg" alt="">Contribute to this listing</a> <span class="hide-for-small-only">#StaySafeStayHome</span></h6>
+
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <section class="filter-section">
+        <div class="grid-container">
+          <div class="grid-x grid-padding-x">
+            <div class="cell large-12">
+              <h2>List of Volunteers</h2>
+              <h6>Filter by Location</h6>
+              <select name="areas" id="areas">
+                  <option value="">Select your area</option>
+                  <option v-for="location in locations" :value="location.toLowerCase()">{{location.toUpperCase()}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section class="content">
+        <div class="grid-container">
+            <ul id="contact-list" class="grid-x grid-padding-x">
+                <li class="cell medium-6" v-for="(volunteer,index) in volunteers" :id="index">
+                  <div class="wrap">
+                    <div class="contact">
+                      <a v-for="phone in volunteer.phoneNumber" :href="`tel:${phone}`" ><span>{{phone}}</span></a>
+                      <!-- <h6 class="type">
+                              {{contact.type.join(", ")}}
+                      </h6> -->
+                    </div>
+                    <div class="other-info">
+                        <p class="shop-name">
+                            {{volunteer.name}}
+                        </p>
+
+                        <p class="location"><img src="img/location.svg" alt="">{{volunteer.location}}</p>
+                        <p class="call-whatsapp">
+                            Order by: <b>Call/SMS</b>
+                        </p>
+                    </div>
+                    <!-- <a class="more-link" v-if="contact.anyImage != '' " :href="contact.anyImage" target="_blank" rel="noopener noreferrer">More info</a> -->
+                  </div>
+                </li>
+                <li v-if="volunteers.length === 0">
+                    <h2 class="text-center">No results found!</h2>
+                </li>
+            </ul>
+
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@5.0.10-beta/dist/fuse.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/v_location.js"></script>
+    <script src="js/volunteersData.js"></script>
+    <script>
+      let volunteers = new Vue({
+        "el":"#areas",
+        data: {
+          locations:[...volunteerLocations]
+        }
+      });
+
+      let content = new Vue({
+        "el":".content",
+        data: {
+          volunteers:[...volunteerList]
+        },
+        mounted(){
+          document.getElementById("areas").addEventListener("change",function(e){
+            let value = e.target.value;
+            let options = {
+                useExtendedSearch: true,
+                threshold: 0,
+                location: 0,
+                distance: 100,
+                minMatchCharLength: 1,
+                keys: [
+                    "location"
+                ]
+            };
+
+            let volunteers = [...volunteerList];
+
+            var filteredData = new Fuse(volunteers,options);
+    
+            var result = filteredData.search(`'${value}`)
+    
+            var finalResult = result.map(function(res){
+                return res.item;
+            });
+    
+            content.volunteers = [...finalResult];
+          });
+        }
+      });
+    </script>
+</body>
+</html>
