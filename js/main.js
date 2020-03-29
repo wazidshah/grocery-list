@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
   d3.csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vTTUD7zK1YRnkzoaVoD33VGMUywCaFhS9gRZXa2_SAEb5PnIne7YWxWqy8k1vYvdc5ocT75_KleDmSX/pub?gid=0&single=true&output=csv').then(function (data) {
-    data = data.map(d => {
+    dataList = data.map(d => {
       d['phone'] = d['phone'].split('/').map(n => n.trim());
       d['type'] = d['type'].split('/').map(n => n.trim());
       return d;
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const list = new Vue({
     "el": "#contact-list",
     data:{
-        contactList: [...data]
+        contactList: [...dataList]
     },
     mounted(){
         document.getElementById("areas").addEventListener("change",function(e){
