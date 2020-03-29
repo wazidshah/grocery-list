@@ -199,7 +199,7 @@
                         <p class="location"><img src="img/location.svg" alt="">{{contact.location}}</p>
                         <p class="call-whatsapp">
                             Order by: <b v-if="contact.whatsapp==='no' || contact.whatsapp==='' ">Call only</b>
-                            <b v-if="contact.whatsapp==='yes'">Call only</b>
+                            <b v-if="contact.whatsapp==='yes'">Call/SMS</b>
                         </p>
                     </div>
                     <a class="more-link" v-if="contact.anyImage != '' " :href="contact.anyImage" target="_blank" rel="noopener noreferrer">More info</a>
