@@ -185,12 +185,18 @@
             <ul id="contact-list" class="grid-x grid-padding-x">
                 <li class="cell medium-6" v-for="(contact,index) in contactList" :id="index">
                   <div class="wrap">
-                    <div class="contact">
+                    <div class="contact" v-if="contact.whatsapp==='no'">
                       <a v-for="phone in contact.phone" :href="`tel:${phone}`" ><span>{{phone}}</span></a>
                       <h6 class="type">
                               {{contact.type.join(", ")}}
                       </h6>
                     </div>
+                    <div class="contact" v-if="contact.whatsapp==='yes'">
+                        <a v-for="phone in contact.phone" target="_blank" :href="`https://api.whatsapp.com/send?phone=${phone}&text=hi`" ><span>{{phone}}</span></a>
+                        <h6 class="type">
+                                {{contact.type.join(", ")}}
+                        </h6>
+                      </div>
                     <div class="other-info">
                         <p class="shop-name">
                             {{contact.shopName}}
