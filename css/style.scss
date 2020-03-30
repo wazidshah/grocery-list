@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {font-family: 'Poppins', sans-serif; font-weight: 700;}
     .menu {
        a{color: $black; border: 2px solid $black; font-size: 16px; margin-right: 10px;border-radius: 7px;font-weight: 600;
             &.fill {background: #fbfdc9;}
-        } 
+        }
     }
 }
 
@@ -76,6 +76,11 @@ h1, h2, h3, h4, h5, h6 {font-family: 'Poppins', sans-serif; font-weight: 700;}
     }
 }
 
+.main-site-navigation {background: #35382B;
+  .menu a {color: #ffffff; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border-right: 2px solid #4E6649; font-size: 14px;
+    &:hover {background: #4E6649;}
+  }
+}
 
 
 ///////// Mobile
