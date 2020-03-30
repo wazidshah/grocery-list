@@ -230,7 +230,7 @@
                     <div style="display: flex; justify-content: right;">
                       <a class="more-link" v-if="contact.anyImage != '' " :href="contact.anyImage" target="_blank" rel="noopener noreferrer" style="border-radius: 5px;background-color: #FBFDC9; display: inline-block; padding: 14px;border: 2px solid #282828;margin-right: 10px;">More info</a>
                     <br>
-                    <a target="_blank" style="border-radius: 5px;display: inline-block; padding: 14px;border: 2px solid #282828;" :href="`https://docs.google.com/forms/d/e/1FAIpQLScet8xoADXBEgVGVxBZOdIxiaYWaM6-OOWtVqEZnO2dXgaOmQ/viewform?usp=pp_url&entry.1929177201=${contact.shopName}&entry.1186530179=${contact.phone}`">Leave feedback</a>
+                    <a target="_blank" data-open="feedback-modal" style="border-radius: 5px;display: inline-block; padding: 14px;border: 2px solid #282828;" :data-link="`https://docs.google.com/forms/d/e/1FAIpQLScet8xoADXBEgVGVxBZOdIxiaYWaM6-OOWtVqEZnO2dXgaOmQ/viewform?usp=pp_url&entry.1929177201=${contact.shopName}&entry.1186530179=${contact.phone}`">Leave feedback</a>
                     </div>
                   </div><!-- Wrap -->
                 </li>
@@ -246,9 +246,16 @@
 
         </div>
     </section>
+    <div class="reveal full" id="feedback-modal" data-reveal>
+      <iframe src="" width="640" height="872" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@5.0.10-beta/dist/fuse.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.15.0/d3.min.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/main.js"></script>
 </body>
