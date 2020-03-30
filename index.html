@@ -204,22 +204,21 @@
             <ul id="contact-list" class="grid-x grid-padding-x">
                 <li class="cell medium-6" v-if="!isLoading" v-for="(contact,index) in contactList" :id="index">
                   <div class="wrap">
+                    <p class="shop-name">
+                        {{contact.shopName}}
+                    </p>
+                    
                     <div class="contact" v-if="contact.whatsapp==='no'">
                       <a v-for="phone in contact.phone" :href="`tel:${phone}`" ><span>{{phone}}</span></a>
-                      <h6 class="type">
-                              {{contact.type.join(", ")}}
-                      </h6>
                     </div>
                     <div class="contact" v-if="contact.whatsapp==='yes'">
                         <a v-for="phone in contact.phone" target="_blank" :href="`https://api.whatsapp.com/send?phone=${phone}&text=hi`" ><span>{{phone}}</span></a>
                         <h6 class="type">
                                 {{contact.type.join(", ")}}
                         </h6>
-                      </div>
+                    </div>
                     <div class="other-info">
-                        <p class="shop-name">
-                            {{contact.shopName}}
-                        </p>
+
 
                         <p class="location"><img src="img/location.svg" alt="">{{contact.location}}</p>
                         <p class="call-whatsapp">
@@ -227,11 +226,14 @@
                             <b v-if="contact.whatsapp==='yes'">whatsapp only</b>
                         </p>
                     </div>
-                    <div style="display: flex; justify-content: right;">
-                      <a class="more-link" v-if="contact.anyImage != '' " :href="contact.anyImage" target="_blank" rel="noopener noreferrer" style="border-radius: 5px;background-color: #FBFDC9; display: inline-block; padding: 14px;border: 2px solid #282828;margin-right: 10px;">More info</a>
-                    <br>
-                    <a target="_blank" data-open="feedback-modal" style="border-radius: 5px;display: inline-block; padding: 14px;border: 2px solid #282828;" :data-link="`https://docs.google.com/forms/d/e/1FAIpQLScet8xoADXBEgVGVxBZOdIxiaYWaM6-OOWtVqEZnO2dXgaOmQ/viewform?usp=pp_url&entry.1929177201=${contact.shopName}&entry.1186530179=${contact.phone}`">Leave feedback</a>
-                    </div>
+
+                    <a class="more-link" v-if="contact.anyImage != '' " :href="contact.anyImage" target="_blank" rel="noopener noreferrer" style="border-radius: 5px;background-color: #FBFDC9; display: inline-block; padding: 14px;border: 2px solid #282828;margin-right: 10px;">More info</a>
+
+                    <h6 class="type">
+                            {{contact.type.join(", ")}}
+                    </h6>
+
+                    <a class="leave-feedback" target="_blank" data-open="feedback-modal" :data-link="`https://docs.google.com/forms/d/e/1FAIpQLScet8xoADXBEgVGVxBZOdIxiaYWaM6-OOWtVqEZnO2dXgaOmQ/viewform?usp=pp_url&entry.1929177201=${contact.shopName}&entry.1186530179=${contact.phone}`">Leave feedback</a>
                   </div><!-- Wrap -->
                 </li>
                 <li v-if="contactList.length === 0 && !isLoading">
