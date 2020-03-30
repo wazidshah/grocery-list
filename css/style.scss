@@ -18,8 +18,11 @@ h1, h2, h3, h4, h5, h6 {font-family: 'Poppins', sans-serif; font-weight: 700;}
     img {width: 80px; position: relative; top: -5px; margin-right: 10px;}
    }
    h6 {margin-bottom: 20px; color: #35382B;
-     a {color: #35382B; text-decoration: underline; margin-right: 20px;
+     a {color: #35382B; text-decoration: underline;
        img {width: 24px; margin-right: 5px; position: relative; top: -2px;}
+     }
+     .share-links {
+       img {width: 20px;}
      }
    }
    .button {margin: 0px;}
@@ -80,6 +83,10 @@ h1, h2, h3, h4, h5, h6 {font-family: 'Poppins', sans-serif; font-weight: 700;}
   .menu a {color: #ffffff; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border-right: 2px solid #4E6649; font-size: 14px;
     &:hover {background: #4E6649;}
   }
+}
+
+span.share-links {margin-left: 30px;
+  a {margin-right: 0px; margin-left: 10px;}
 }
 
 

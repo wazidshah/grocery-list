@@ -24,13 +24,14 @@ h1, h2, h3, h4, h5, h6 {
     color: #35382B; }
     #site-header h6 a {
       color: #35382B;
-      text-decoration: underline;
-      margin-right: 20px; }
+      text-decoration: underline; }
       #site-header h6 a img {
         width: 24px;
         margin-right: 5px;
         position: relative;
         top: -2px; }
+    #site-header h6 .share-links img {
+      width: 20px; }
   #site-header .button {
     margin: 0px; }
 
@@ -156,6 +157,12 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 14px; }
     .main-site-navigation .menu a:hover {
       background: #4E6649; }
+
+span.share-links {
+  margin-left: 30px; }
+  span.share-links a {
+    margin-right: 0px;
+    margin-left: 10px; }
 
 @media screen and (max-width: 640px) {
   #site-header {

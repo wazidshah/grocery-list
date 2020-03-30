@@ -79,6 +79,16 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/img/fb.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/img/fb.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/img/fish.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -181,11 +191,31 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/img/twitter.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/img/twitter.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/img/vegitable.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
 		"oAP": "/img/vegitable.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/img/whatsapp.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/img/whatsapp.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
