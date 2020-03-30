@@ -50,6 +50,14 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/delivery-volunteers.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/delivery-volunteers.html",
+		"oF": 0
+		},
 	"/favicon.ico": {
 		"cB": 0,
 		"ft": 8192,
@@ -306,13 +314,43 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"/volunteers.html": {
+	"/LICENSE.md": {
 		"cB": 0,
-		"ft": 8192,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/volunteers.html",
-		"oF": 0
+		"oAP": "/LICENSE.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"/README.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
 		}
 	},
 "hooks": [
