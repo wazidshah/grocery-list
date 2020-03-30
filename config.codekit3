@@ -273,6 +273,17 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/img/org/virtualtribe.jpg": {
+		"ft": 16384,
+		"iS": 146515,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/org/virtualtribe.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
 	"/img/org/virtualtribe.png": {
 		"ft": 32768,
 		"iS": 26441,

@@ -225,9 +225,9 @@ span.share-links {
       height: 50px;
       width: auto; }
     .volunteer-org li a img.virtual {
-      height: 70px;
+      height: 60px;
       position: relative;
-      top: -8px; }
+      top: -2px; }
 
 @media screen and (max-width: 640px) {
   #site-header {
