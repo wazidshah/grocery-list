@@ -204,12 +204,12 @@
             <ul id="contact-list" class="grid-x grid-padding-x">
                 <li class="cell medium-6" v-if="!isLoading" v-for="(contact,index) in contactList" :id="index">
                   <div class="wrap">
-                    <p class="shop-name">
+                    <p class="shop-name"><img src="img/help.svg" alt="">
                         {{contact.shopName}}
                     </p>
-                    
+
                     <div class="contact" v-if="contact.whatsapp==='no'">
-                      <a v-for="phone in contact.phone" :href="`tel:${phone}`" ><span>{{phone}}</span></a>
+                      <a v-for="phone in contact.phone" :href="`tel:${phone}`" ><img src="img/call.svg" alt=""><span>{{phone}}</span></a>
                     </div>
                     <div class="contact" v-if="contact.whatsapp==='yes'">
                         <a v-for="phone in contact.phone" target="_blank" :href="`https://api.whatsapp.com/send?phone=${phone}&text=hi`" ><span>{{phone}}</span></a>
@@ -220,7 +220,7 @@
                     <div class="other-info">
 
 
-                        <p class="location"><img src="img/location.svg" alt="">{{contact.location}}</p>
+                        <p class="location" title="Location"><img src="img/location.svg" alt="">{{contact.location}}</p>
                         <p class="call-whatsapp">
                             Order by: <b v-if="contact.whatsapp==='no' || contact.whatsapp==='' ">Call/SMS</b>
                             <b v-if="contact.whatsapp==='yes'">whatsapp only</b>

@@ -87,6 +87,16 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/img/call.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/img/call.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/img/fb.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -122,6 +132,16 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "/img/grocery.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/img/help.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/img/help.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,

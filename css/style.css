@@ -127,6 +127,7 @@ h1, h2, h3, h4, h5, h6 {
       margin-bottom: 30px; }
       .content ul li .wrap {
         padding: 20px;
+        padding-bottom: 10px;
         border-radius: 5px;
         position: relative;
         border: 2px solid #4E6649;
@@ -138,19 +139,28 @@ h1, h2, h3, h4, h5, h6 {
           top: -2px;
           margin-right: 5px; }
         .content ul li .wrap p {
-          margin: 0px; }
+          margin-bottom: 10px;
+          font-size: 14px; }
         .content ul li .wrap p.shop-name {
           margin-bottom: 10px;
           font-weight: 700;
-          font-size: 16px; }
+          font-size: 16px;
+          text-transform: capitalize; }
+        .content ul li .wrap p.location {
+          font-size: 14px; }
         .content ul li .wrap .leave-feedback {
           color: #4E6649;
           text-decoration: underline;
           position: absolute;
-          right: 10px;
-          bottom: 10px;
+          right: 20px;
+          bottom: 20px;
           font-weight: 600;
           font-size: 12px; }
+        .content ul li .wrap h6.type {
+          font-size: 14px;
+          color: #4E6649;
+          font-weight: 600;
+          text-transform: uppercase; }
       .content ul li .contact a {
         font-size: 24px;
         font-weight: 700;
