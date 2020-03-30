@@ -106,6 +106,16 @@ span.share-links {margin-left: 30px;
 
 .menu-open, .menu-close {display: none;}
 
+.volunteer-list a {font-weight: 600;}
+.volunteer-list li {color: #35382B; font-weight: 600;}
+
+.volunteer-org {list-style: none;
+  li a {padding: 0px; padding-right: 20px; padding-bottom: 20px;
+    img {max-width: 100%; height: 50px; width: auto;}
+    img.virtual {height: 70px; position: relative; top: -8px;}
+  }
+}
+
 
 ///////// Mobile
 
@@ -141,5 +151,7 @@ span.share-links {margin-left: 30px;
       }
     }
   }
+
+  .page h2 {font-size: 26px;}
 
 }
