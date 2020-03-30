@@ -16,6 +16,12 @@ file in your browser and work on it - you need a very simple HTTP server.
 On your terminal, run the following command:
 
 ```bash
+python -m SimpleHTTPServer
+```
+
+If this gives you errors, try:
+
+```bash
 python3 -m http.server
 ```
 
