@@ -61,16 +61,16 @@ The crowdsourced shops data is processed by volunteers and then copied to the ma
 1. Shop type should be lowercase
 2. If a shop has multiple types it should be separated by a slash — `/`.
 3. Shop type should only be one of these:
- * Medical
- * Grocery
- * Milk
- * Vegetables
- * Fish & Meat
- * Veteniary
+  * Medical
+  * Grocery
+  * Milk
+  * Vegetables
+  * Fish & Meat
+  * Veteniary
 4. If a shop has multiple phone numbers it should be separated by a slash — `/`.
 5. Always go sequentially when moving the data and announce on WhatsApp that you're about to do some migration.
-6. The row that is marked <span style="background:yellow">yellow</span> is the last one that was transferred to the main sheet. Start after that.
-7. When working on moving some rows to the main sheet, make sure to color them <span style="background:cyan">cyan</span> so others know you're working on them. You can make them white once you're done.
-8. After moving those rows, mark the next one with <span style="background:yellow">yellow</span> so that the other volunteers know till which row the data has been moved.
-9. If you find any data that you __dont__ transfer to the main sheet, whether it was because the data has errors, or if you think the categories aren't correct, make sure to mark them in <span style="background:red">red</span>. Someone else (@wazidshah) will look at them and decide what to do.
-10. Once you're done migrating a few rows make sure the ones you're done are white again and that you've marked the last one that was done as <span style="background:yellow">yellow</span>. Also, announce on WhatsApp that you're done.
+6. The row that is marked  ![yellow](https://placehold.it/15/fdff00/000000?text=+) yellow is the last one that was transferred to the main sheet. Start after that.
+7. When working on moving some rows to the main sheet, make sure to color them ![cyan](https://placehold.it/15/2DFEFF/000000?text=+) cyan so others know you're working on them. You can make them white once you're done.
+8. After moving those rows, mark the next one with ![yellow](https://placehold.it/15/fdff00/000000?text=+) yellow so that the other volunteers know till which row the data has been moved.
+9. If you find any data that you __dont__ transfer to the main sheet, whether it was because the data has errors, or if you think the categories aren't correct, make sure to mark them in ![red](https://placehold.it/15/ff0000/000000?text=+) red. Someone else (@wazidshah) will look at them and decide what to do.
+10. Once you're done migrating a few rows make sure the ones you're done are white again and that you've marked the last one that was done as ![yellow](https://placehold.it/15/fdff00/000000?text=+) yellow. Also, announce on WhatsApp that you're done.
