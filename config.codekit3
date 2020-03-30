@@ -50,84 +50,24 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"/data-migration-script/data.csv": {
+	"/favicon.ico": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/data-migration-script/data.csv",
+		"oAP": "/favicon.ico",
 		"oF": 0
 		},
-	"/data-migration-script/data.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
+	"/favicon.png": {
+		"ft": 32768,
+		"iS": 12525,
 		"oA": 0,
-		"oAP": "/data-migration-script/data-min.js",
+		"oAP": "/favicon.png",
 		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/data-migration-script/index.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/data-migration-script/index-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/data-migration-script/node_modules": {
-		"ft": 65536,
-		"oA": 2,
-		"oAP": "/build/data-migration-script/node_modules",
-		"oF": 0
-		},
-	"/data-migration-script/package-lock.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/data-migration-script/package-lock-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/data-migration-script/package.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/data-migration-script/package-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/data-migration-script/README.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/data-migration-script/README.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"/form.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/form.html",
-		"oF": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"/img/all.svg": {
 		"ft": 2097152,
@@ -219,6 +159,28 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/img/og-image.jpg": {
+		"ft": 16384,
+		"iS": 34837,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/og-image.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/img/screenshot.png": {
+		"ft": 32768,
+		"iS": 36093,
+		"oA": 0,
+		"oAP": "/img/screenshot.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/img/vegitable.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -291,6 +253,36 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"/js/v_location.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/v_location-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/js/volunteersData.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/volunteersData-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/volunteers.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/volunteers.html",
+		"oF": 0
 		}
 	},
 "hooks": [
