@@ -4,13 +4,13 @@
 
 The following is a set of guidelines for contributing to the different aspects of the project.
 
-#### Table of contents
+#### What can I do to help?
 
 [I know of a shop that is open](#i-know-of-a-shop-that-is-open)
 
 [A shop that you've listed is incorrect](#a-shop-that-you've-listed-is-incorrect)
 
-[I saw an technical issue on the website](#i-saw-an-technical-issue-on-the-website)
+[I saw a technical issue on the website](#i-saw-a-technical-issue-on-the-website)
 
 
 [I can help with the website code](#i-can-help-with-the-website-code)
@@ -24,7 +24,7 @@ If you know of a shop that is open we'd like you to do two things:
 1. Double check the [website](http://goaforyou.in/) to make sure that it isn't already there.
 2. Call the number you are about add and make sure that it is valid and is indeed a shop.
 
-Once you've done these things head on over to [this form](http://goaforyou.in/) and add all the details that you can. Our volunteers will go through it and it to the website as soon as the can.
+Once you've done these things head on over to [this form](http://goaforyou.in/) and add all the details that you can. Our volunteers will go through it and add it to the website as soon as they can.
 
 ## A shop that you've listed is incorrect
 
@@ -34,7 +34,7 @@ These things happen sometimes. Shops that were functional a day ago stop accepti
 
 Use the leave feedback link to let us know what is wrong with this entry.
 
-## I saw an technical issue on the website
+## I saw a technical issue on the website
 
 We list all our technical issues on Github. You can see the [list](https://github.com/wazidshah/grocery-list/issues/) and check if someone has already reported it, if not, feel free to [open a new issue](https://github.com/wazidshah/grocery-list/issues/new).
 
@@ -61,12 +61,12 @@ The crowdsourced shops data is processed by volunteers and then copied to the ma
 1. Shop type should be lowercase
 2. If a shop has multiple types it should be separated by a slash — `/`.
 3. Shop type should only be one of these:
-  * Medical
-  * Grocery
-  * Milk
-  * Vegetables
-  * Fish & Meat
-  * Veteniary
+  * medical
+  * grocery
+  * milk
+  * vegetables
+  * fish
+  * veterinary
 4. If a shop has multiple phone numbers it should be separated by a slash — `/`.
 5. Always go sequentially when moving the data and announce on WhatsApp that you're about to do some migration.
 6. The row that is marked  ![yellow](https://placehold.it/15/fdff00/000000?text=+) yellow is the last one that was transferred to the main sheet. Start after that.

@@ -207,6 +207,28 @@ span.share-links {
 .menu-open, .menu-close {
   display: none; }
 
+.volunteer-list a {
+  font-weight: 600; }
+
+.volunteer-list li {
+  color: #35382B;
+  font-weight: 600; }
+
+.volunteer-org {
+  list-style: none; }
+  .volunteer-org li a {
+    padding: 0px;
+    padding-right: 20px;
+    padding-bottom: 20px; }
+    .volunteer-org li a img {
+      max-width: 100%;
+      height: 50px;
+      width: auto; }
+    .volunteer-org li a img.virtual {
+      height: 60px;
+      position: relative;
+      top: -2px; }
+
 @media screen and (max-width: 640px) {
   #site-header {
     padding: 30px 0px;
@@ -267,4 +289,6 @@ span.share-links {
           font-size: 16px;
           padding: 15px 0px; }
         .main-site-navigation.open .menu li:last-child a {
-          border: 0px; } }
+          border: 0px; }
+  .page h2 {
+    font-size: 26px; } }
