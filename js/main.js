@@ -113,53 +113,67 @@ const list = new Vue({
                 }
             })
         })
-
+    },
+    updated()
+    {
+        const modal = document.getElementById("feedback-modal");
+        const dataLinks = document.querySelectorAll("[data-link]");
+        
+        let iframe = document.querySelector("#feedback-modal iframe")
+        for(var i =0; i< dataLinks.length; i++)
+        {
+            dataLinks[i].addEventListener("click",function(e){
+                e.preventDefault();
+                console.log(e.target);
+                iframe.setAttribute("src",e.target.dataset.link)
+            })
+        }
     }
   });
 
-  const filterButton = document.getElementById("filter");
+//   const filterButton = document.getElementById("filter");
   const grocery = document.getElementById("grocery");
   const medical = document.getElementById("medical");
 
 
 
-  filterButton.addEventListener("click",function(e){
-    e.preventDefault();
-    const copyData = [...dataList];
-    const type = document.querySelector("input[name='type']:checked").value;
-    const areas = document.querySelector("#areas option:checked");
-    let options = {
-        useExtendedSearch: true,
-        threshold: 0,
-        location: 0,
-        distance: 100,
-        minMatchCharLength: 1,
-        keys: [
-            "type",
-            "location"
-        ]
-    }
-    // console.log(`"'${areas.value}"`);
+//   filterButton.addEventListener("click",function(e){
+//     e.preventDefault();
+//     const copyData = [...dataList];
+//     const type = document.querySelector("input[name='type']:checked").value;
+//     const areas = document.querySelector("#areas option:checked");
+//     let options = {
+//         useExtendedSearch: true,
+//         threshold: 0,
+//         location: 0,
+//         distance: 100,
+//         minMatchCharLength: 1,
+//         keys: [
+//             "type",
+//             "location"
+//         ]
+//     }
+//     // console.log(`"'${areas.value}"`);
 
-    let typeFiltered = copyData.filter(function(element){
-        if(type==element.type)
-        {
-            return true;
-        }
+//     let typeFiltered = copyData.filter(function(element){
+//         if(type==element.type)
+//         {
+//             return true;
+//         }
 
-        return false;
-    });
+//         return false;
+//     });
 
-    var filteredData = new Fuse(typeFiltered,options);
+//     var filteredData = new Fuse(typeFiltered,options);
 
-    var result = filteredData.search(`'${areas.value}`)
+//     var result = filteredData.search(`'${areas.value}`)
 
-    var finalResult = result.map(function(res){
-        return res.item;
-    });
+//     var finalResult = result.map(function(res){
+//         return res.item;
+//     });
 
-    list.contactList = [...finalResult];
-    console.log(finalResult);
-  });
+//     list.contactList = [...finalResult];
+//     console.log(finalResult);
+//   });
 //  });
 // });
