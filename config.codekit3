@@ -9,6 +9,14 @@
 	],
 "creatorBuild": "31934",
 "files": {
+	"/about.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/about.html",
+		"oF": 0
+		},
 	"/css/app.css": {
 		"aP": 1,
 		"bl": 0,

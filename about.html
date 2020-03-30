@@ -70,99 +70,31 @@
       </div>
     </header>
 
-    <section class="filter-section">
+    <section class="page">
         <div class="grid-container">
           <div class="grid-x grid-padding-x">
             <div class="cell large-12">
-              <h2>List of Delivery Volunteers</h2>
-              <p>The delivery volunteer list is the list of people who have registered themselves with the Government and are allowed to step-out for deliveries. They are also able to coordinate with shops in that locality to get you what you need. This list is obtained from official sources and will be updated as soon as we get more information from them.</p>
+              <h2>About</h2>
+              <p>Goa for you is a crowdsourced social welfare benefit initiative. A listing website to locate the nearest home delivery service for your daily essentials in terms of groceries and other basic requirements.</p>
+
+<p>We collect grocery store data using a <a href="https://docs.google.com/forms/d/e/1FAIpQLSdIwhoXWbVNd6_ZIXTAV8lCkmLo_cwuZ8jVY6rkssdYJA4Upw/viewform?usp=sf_link">Google Form</a> (<a href="https://policies.google.com/privacy">Privacy Policy</a> applies), our team cleans up the data and adds it to the website. We don’t verify every single entry but try our best to keep the data clean and up-to-date.</p>
+
+<p>The <a href="delivery-volunteers.html">delivery volunteer list</a> is the list of people who have registered themselves with the Government and are allowed to step-out for deliveries. They are also able to coordinate with shops in that locality to get you what you need. This list is obtained from official sources and will be updated as soon as we get more information from them.</p>
+
+<p>The code for the website lives on <a href="https://github.com/wazidshah/grocery-list">Github</a> where we welcome bug reports and PRs. The website is deployed using <a href="https://www.netlify.com/">Netlify</a> and the data comes from a crowdsourced and curated <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTTUD7zK1YRnkzoaVoD33VGMUywCaFhS9gRZXa2_SAEb5PnIne7YWxWqy8k1vYvdc5ocT75_KleDmSX/pub?gid=0&single=true&output=csv">Google Sheet</a>. If you find an issue with the data, please reach out to us at …</p>
+
+<p>Disclaimer: We don’t guarantee the accuracy of the information provided here.
+</p>
               <br>
-              <h6>Filter by Location</h6>
-              <select name="areas" id="areas">
-                  <option value="">Select your area</option>
-                  <option v-for="location in locations" :value="location.toLowerCase()">{{location.toUpperCase()}}</option>
-              </select>
+
             </div>
           </div>
         </div>
     </section>
-    <section class="content">
-        <div class="grid-container">
-            <ul id="contact-list" class="grid-x grid-padding-x">
-                <li class="cell medium-6" v-for="(volunteer,index) in volunteers" :id="index">
-                  <div class="wrap">
-                    <div class="contact">
-                      <a v-for="phone in volunteer.phoneNumber" :href="`tel:${phone}`" ><span>{{phone}}</span></a>
-                      <!-- <h6 class="type">
-                              {{contact.type.join(", ")}}
-                      </h6> -->
-                    </div>
-                    <div class="other-info">
-                        <p class="shop-name">
-                            {{volunteer.name}}
-                        </p>
 
-                        <p class="location"><img src="img/location.svg" alt="">{{volunteer.location}}</p>
-                        <p class="call-whatsapp">
-                            Order by: <b>Call/SMS</b>
-                        </p>
-                    </div>
-                    <!-- <a class="more-link" v-if="contact.anyImage != '' " :href="contact.anyImage" target="_blank" rel="noopener noreferrer">More info</a> -->
-                  </div>
-                </li>
-                <li v-if="volunteers.length === 0">
-                    <h2 class="text-center">No results found!</h2>
-                </li>
-            </ul>
-
-        </div>
-    </section>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@5.0.10-beta/dist/fuse.min.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/v_location.js"></script>
-    <script src="js/volunteersData.js"></script>
-    <script>
-      let volunteers = new Vue({
-        "el":"#areas",
-        data: {
-          locations:[...volunteerLocations]
-        }
-      });
 
-      let content = new Vue({
-        "el":".content",
-        data: {
-          volunteers:[...volunteerList]
-        },
-        mounted(){
-          document.getElementById("areas").addEventListener("change",function(e){
-            let value = e.target.value;
-            let options = {
-                useExtendedSearch: true,
-                threshold: 0,
-                location: 0,
-                distance: 100,
-                minMatchCharLength: 1,
-                keys: [
-                    "location"
-                ]
-            };
-
-            let volunteers = [...volunteerList];
-
-            var filteredData = new Fuse(volunteers,options);
-
-            var result = filteredData.search(`'${value}`)
-
-            var finalResult = result.map(function(res){
-                return res.item;
-            });
-
-            content.volunteers = [...finalResult];
-          });
-        }
-      });
-    </script>
 </body>
 </html>
