@@ -44,8 +44,8 @@
         <div class="cell medium-12">
           <ul class="menu">
             <li><a href="/">Home</a></li>
-            <li><a href="delivery-volunteers.html" class="active">Delivery Volunteers List</a></li>
-            <li><a href="emergency.html">Emergency Services List</a></li>
+            <li><a href="delivery-volunteers.html">Delivery Volunteers List</a></li>
+            <li><a href="emergency.html" class="active">Emergency Services List</a></li>
             <li><a href="about.html">About</a></li>
           </ul>
         </div>
@@ -70,99 +70,20 @@
       </div>
     </header>
 
-    <section class="filter-section">
+    <section class="page">
         <div class="grid-container">
           <div class="grid-x grid-padding-x">
             <div class="cell large-12">
-              <h2>List of Delivery Volunteers</h2>
-              <p>The delivery volunteer list is the list of people who have registered themselves with the Government and are allowed to step-out for deliveries. They are also able to coordinate with shops in that locality to get you what you need. This list is obtained from official sources and will be updated as soon as we get more information from them.</p>
-              <br>
-              <h6>Filter by Location</h6>
-              <select name="areas" id="areas">
-                  <option value="">Select your area</option>
-                  <option v-for="location in locations" :value="location.toLowerCase()">{{location.toUpperCase()}}</option>
-              </select>
+              <h2>Emergency Services</h2>
+              <p>Goa for you is a crowdsourced social welfare benefit initiative. A listing website to locate the nearest home delivery service for your daily essentials in terms of groceries and other basic requirements.</p>
             </div>
           </div>
         </div>
     </section>
-    <section class="content">
-        <div class="grid-container">
-            <ul id="contact-list" class="grid-x grid-padding-x">
-                <li class="cell medium-6" v-for="(volunteer,index) in volunteers" :id="index">
-                  <div class="wrap">
-                    <div class="contact">
-                      <a v-for="phone in volunteer.phoneNumber" :href="`tel:${phone}`" ><span>{{phone}}</span></a>
-                      <!-- <h6 class="type">
-                              {{contact.type.join(", ")}}
-                      </h6> -->
-                    </div>
-                    <div class="other-info">
-                        <p class="shop-name">
-                            {{volunteer.name}}
-                        </p>
 
-                        <p class="location"><img src="img/location.svg" alt="">{{volunteer.location}}</p>
-                        <p class="call-whatsapp">
-                            Order by: <b>Call/SMS</b>
-                        </p>
-                    </div>
-                    <!-- <a class="more-link" v-if="contact.anyImage != '' " :href="contact.anyImage" target="_blank" rel="noopener noreferrer">More info</a> -->
-                  </div>
-                </li>
-                <li v-if="volunteers.length === 0">
-                    <h2 class="text-center">No results found!</h2>
-                </li>
-            </ul>
-
-        </div>
-    </section>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@5.0.10-beta/dist/fuse.min.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/v_location.js"></script>
-    <script src="js/volunteersData.js"></script>
-    <script>
-      let volunteers = new Vue({
-        "el":"#areas",
-        data: {
-          locations:[...volunteerLocations]
-        }
-      });
 
-      let content = new Vue({
-        "el":".content",
-        data: {
-          volunteers:[...volunteerList]
-        },
-        mounted(){
-          document.getElementById("areas").addEventListener("change",function(e){
-            let value = e.target.value;
-            let options = {
-                useExtendedSearch: true,
-                threshold: 0,
-                location: 0,
-                distance: 100,
-                minMatchCharLength: 1,
-                keys: [
-                    "location"
-                ]
-            };
-
-            let volunteers = [...volunteerList];
-
-            var filteredData = new Fuse(volunteers,options);
-
-            var result = filteredData.search(`'${value}`)
-
-            var finalResult = result.map(function(res){
-                return res.item;
-            });
-
-            content.volunteers = [...finalResult];
-          });
-        }
-      });
-    </script>
 </body>
 </html>
