@@ -20,6 +20,7 @@ function parseSheetCSV(data) {
 function initialData() {
     const cachedData = localStorage.getItem(cacheKey);
     if (cachedData) {
+        dataList = parseSheetCSV(JSON.parse(cachedData));
         return {
             contactList: parseSheetCSV(JSON.parse(cachedData)),
             isLoading: false
