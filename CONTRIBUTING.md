@@ -15,7 +15,7 @@ The following is a set of guidelines for contributing to the different aspects o
 
 [I can help with the website code](#i-can-help-with-the-website-code)
 
-[I can curate, organize and clean up the data][#i-can-curate-organize-and-clean-up-the-data]
+[I can curate, organize and clean up the data](#i-can-curate-organize-and-clean-up-the-data)
 
 ## I know of a shop that is open
 
