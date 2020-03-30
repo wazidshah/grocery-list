@@ -41,7 +41,8 @@ const list = new Vue({
     },
     mounted(){
         d3.csv(sheetsUrl).then(function (data) {
-            // Cache raw data, so we can load much quicker next time
+            // After fetching fresh data from Google Sheets, the localStorage cache is updated.
+            // Then, fresh data is shown to the end user
             localStorage.setItem(cacheKey, JSON.stringify(data));
             list.contactList = parseSheetCSV(data);
             list.isLoading = false;
