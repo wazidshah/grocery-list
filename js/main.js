@@ -9,7 +9,7 @@ const list = new Vue({
     },
     created()
     {
-       
+
     },
     mounted(){
         d3.csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vTTUD7zK1YRnkzoaVoD33VGMUywCaFhS9gRZXa2_SAEb5PnIne7YWxWqy8k1vYvdc5ocT75_KleDmSX/pub?gid=0&single=true&output=csv').then(function (data) {
@@ -118,7 +118,7 @@ const list = new Vue({
     {
         const modal = document.getElementById("feedback-modal");
         const dataLinks = document.querySelectorAll("[data-link]");
-        
+
         let iframe = document.querySelector("#feedback-modal iframe")
         for(var i =0; i< dataLinks.length; i++)
         {
@@ -177,3 +177,20 @@ const list = new Vue({
 //   });
 //  });
 // });
+
+// Menu open-close
+
+$(document).ready(function() {
+  $(".menu-open").click(function(){
+    $(".menu-open").addClass("open");
+    $(".menu-close").addClass("open");
+    $(".main-site-navigation").addClass("open");
+  });
+
+  $(".menu-close").click(function(){
+    $(".menu-open").removeClass("open");
+    $(".menu-close").removeClass("open");
+    $(".main-site-navigation").removeClass("open");
+  });
+
+});

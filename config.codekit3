@@ -113,6 +113,16 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/img/close.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/img/close.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/img/fb.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -198,6 +208,16 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "/img/medical.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/img/menu.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/img/menu.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
