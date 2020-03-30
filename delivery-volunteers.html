@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <title>Goa for you - Volunteers list</title>
+    <title>Goa for you</title>
     <meta name="title" content="Goa for you - Together we deal with the crisis ">
     <meta name="description" content="We come together to help each other in crisis. This is one place where you can find all the approved home delivery services for your Essentials like Groceries and more. ">
     <meta name="keywords" content="goa, covid-19, corona, goa help, goa for you">
@@ -14,7 +14,9 @@
 
     <meta property="og:title" content="Goa for you - Together we deal with the crisis" />
     <meta property="og:url" content="https://goaforyou.in" />
-    <meta property="og:image" content="https://goaforyou.in/img/screenshot.png" />
+    <meta property="og:image" content="img/og-image.jpg" />
+
+    <link rel="icon" type="image/png" href="favicon.png">
 
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -35,6 +37,21 @@
 
 </head>
 <body>
+
+  <div class="main-site-navigation">
+    <div class="grid-container">
+      <div class="grid-x grid-padding-x">
+        <div class="cell medium-12">
+          <ul class="menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="delivery-volunteers.html" class="active">Delivery Volunteers List</a></li>
+            <li><a href="#">Emergency Services List</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
     <header id="site-header">
       <div class="grid-container">
         <div class="grid-x grid-padding-x">
@@ -43,21 +60,15 @@
           </div>
           <div class="cell medium-6">
             <p><strong>Goa for you</strong> is a crowdsourced social welfare benefit initiative. A listing website to locate the nearest home delivery service for your daily essentials in terms of groceries and other basic requirements.</p>
-            <h6><a href="https://docs.google.com/forms/d/e/1FAIpQLSdIwhoXWbVNd6_ZIXTAV8lCkmLo_cwuZ8jVY6rkssdYJA4Upw/viewform?usp=sf_link" class="" target="_blank"><img src="img/list.svg" alt="">Contribute to this listing</a> <span class="hide-for-small-only">#StaySafeStayHome</span></h6>
-
+            <h6><a href="https://docs.google.com/forms/d/e/1FAIpQLSdIwhoXWbVNd6_ZIXTAV8lCkmLo_cwuZ8jVY6rkssdYJA4Upw/viewform?usp=sf_link" class="" target="_blank"><img src="img/list.svg" alt="">Contribute to this listing</a> <span class="share-links">Share:
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//goaforyou.in/" target="_blank"><img src="img/fb.svg" alt=""></a>
+              <a href="https://twitter.com/intent/tweet?text=Locate%20the%20nearest%20home%20delivery%20service%20for%20your%20daily%20essentials%20in%20Goa%3A%20https%3A//goaforyou.in/" target="_blank"><img src="img/twitter.svg" alt=""></a>
+              <a href="whatsapp://send?text=Locate the nearest home delivery service for your daily essentials in Goa: https://goaforyou.in/" data-action="share/whatsapp/share" target="_blank"><img src="img/whatsapp.svg" alt=""></a>
+            </span></h6>
           </div>
         </div>
       </div>
     </header>
-
-    <div class="menu-section">
-      <div class="grid-container">
-        <ul class="menu align-center">
-          <li><a href="/">Home</a></li>
-          <li><a class="fill" href="volunteers.html">Volunteers list</a></li>
-        </ul>
-      </div>
-    </div>
 
     <section class="filter-section">
         <div class="grid-container">
@@ -139,13 +150,13 @@
             let volunteers = [...volunteerList];
 
             var filteredData = new Fuse(volunteers,options);
-    
+
             var result = filteredData.search(`'${value}`)
-    
+
             var finalResult = result.map(function(res){
                 return res.item;
             });
-    
+
             content.volunteers = [...finalResult];
           });
         }
