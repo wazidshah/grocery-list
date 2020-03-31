@@ -112,6 +112,150 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/icons/android-chrome-192x192.png": {
+		"ft": 32768,
+		"iS": 11033,
+		"oA": 0,
+		"oAP": "/icons/android-chrome-192x192.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/icons/android-chrome-512x512.png": {
+		"ft": 32768,
+		"iS": 34921,
+		"oA": 0,
+		"oAP": "/icons/android-chrome-512x512.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/icons/apple-touch-icon.png": {
+		"ft": 32768,
+		"iS": 10574,
+		"oA": 0,
+		"oAP": "/icons/apple-touch-icon.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/icons/browserconfig.xml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/icons/browserconfig.xml",
+		"oF": 0
+		},
+	"/icons/favicon-16x16.png": {
+		"ft": 32768,
+		"iS": 1070,
+		"oA": 0,
+		"oAP": "/icons/favicon-16x16.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/icons/favicon-32x32.png": {
+		"ft": 32768,
+		"iS": 1836,
+		"oA": 0,
+		"oAP": "/icons/favicon-32x32.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/icons/favicon.ico": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/icons/favicon.ico",
+		"oF": 0
+		},
+	"/icons/mstile-144x144.png": {
+		"ft": 32768,
+		"iS": 8358,
+		"oA": 0,
+		"oAP": "/icons/mstile-144x144.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/icons/mstile-150x150.png": {
+		"ft": 32768,
+		"iS": 8109,
+		"oA": 0,
+		"oAP": "/icons/mstile-150x150.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/icons/mstile-310x150.png": {
+		"ft": 32768,
+		"iS": 8731,
+		"oA": 0,
+		"oAP": "/icons/mstile-310x150.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/icons/mstile-310x310.png": {
+		"ft": 32768,
+		"iS": 18357,
+		"oA": 0,
+		"oAP": "/icons/mstile-310x310.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/icons/mstile-70x70.png": {
+		"ft": 32768,
+		"iS": 5717,
+		"oA": 0,
+		"oAP": "/icons/mstile-70x70.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/icons/safari-pinned-tab.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/icons/safari-pinned-tab.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/icons/site.webmanifest": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/icons/site.webmanifest",
+		"oF": 0
+		},
 	"/img/all.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -490,7 +634,7 @@
 	"creationDate": 607103473.04401696,
 	"displayValue": "grocery-list",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "brackets-tar",
+	"iconImageName": "/icons/apple-touch-icon.png",
 	"iconImageWasSetByUser": 0
 	},
 "projectSettings": {
