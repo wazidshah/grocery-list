@@ -174,7 +174,8 @@ a {
         color: #4E6649;
         line-height: 24px;
         display: block;
-        margin-bottom: 10px; }
+        margin-bottom: 10px;
+        text-decoration: none; }
 
 .main-site-navigation {
   background: #35382B; }
@@ -183,7 +184,7 @@ a {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border-right: 2px solid #4E6649;
+    border-right: 2px solid #4e523e;
     font-size: 14px; }
     .main-site-navigation .menu a:hover, .main-site-navigation .menu a.active {
       background: #4E6649; }

@@ -79,7 +79,7 @@ a {color: #35382B; text-decoration: underline;
             h6.type {font-size: 14px; color: #4E6649; font-weight: 600; text-transform: uppercase;}
           }
             .contact {
-              a {font-size: 24px; font-weight: 700; color: #4E6649; line-height: 24px; display: block; margin-bottom: 10px;}
+              a {font-size: 24px; font-weight: 700; color: #4E6649; line-height: 24px; display: block; margin-bottom: 10px; text-decoration: none;}
                 p{}
                 .call-whatsapp {}
             }
@@ -88,7 +88,7 @@ a {color: #35382B; text-decoration: underline;
 }
 
 .main-site-navigation {background: #35382B;
-  .menu a {color: #ffffff; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border-right: 2px solid #4E6649; font-size: 14px;
+  .menu a {color: #ffffff; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border-right: 2px solid #4e523e; font-size: 14px;
     &:hover, &.active {background: #4E6649;}
   }
 }
