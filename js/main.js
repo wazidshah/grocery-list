@@ -58,7 +58,8 @@ const list = new Vue({
                 minMatchCharLength: 1,
                 keys: [
                     "type",
-                    "location"
+                    "location",
+                    "area"
                 ]
             };
 
@@ -82,13 +83,25 @@ const list = new Vue({
 
             var filteredData = new Fuse(typeFiltered,options);
 
-            var result = filteredData.search(`'${areas.value}`)
+            var searchString = areas.value === 'nearby' ? '':areas.value;
+            var result = filteredData.search(`'${searchString}`)
 
             var finalResult = result.map(function(res){
                 return res.item;
             });
 
             list.contactList = [...finalResult];
+
+            // Check for nearbyAreas
+            if ( areas.value === 'nearby' ) {
+              navigator.geolocation.getCurrentPosition(function (position) {
+                allDistances(position.coords.latitude, position.coords.longitude)
+                var nearbyData = data.filter(function (d) {
+                  return window.nearbyAreas.indexOf(d.area) > -1;
+                })
+                list.contactList = [...nearbyData];
+              })
+            }
       });
 
         //for radio buttons
