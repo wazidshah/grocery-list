@@ -96,6 +96,8 @@ const list = new Vue({
             if ( areas.value === 'nearby' ) {
               navigator.geolocation.getCurrentPosition(function (position) {
                 allDistances(position.coords.latitude, position.coords.longitude)
+                console.log(position.coords);
+                console.log(window.nearbyAreas);
                 var nearbyData = data.filter(function (d) {
                   return window.nearbyAreas.indexOf(d.area) > -1;
                 })
