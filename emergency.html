@@ -74,7 +74,82 @@
       </div>
     </header>
 
-    <section class="page">
+    <section class="filter-section">
+      <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+        <!-- <div class="cell medium-2">
+          <h6>Filter by District</h6>
+          <select name="district" id="district">
+              <option value="">Select your district</option>
+              <option value="all">All Goa</option>
+              <option value="north goa">North Goa</option>
+              <option value="south goa">South Goa</option>
+          </select>
+        </div> -->
+        <div class="cell medium-4">
+          <h6>Filter by Location</h6>
+          <select name="areas" id="areas">
+              <option value="">Select your area</option>
+              <option value="agonda">Agonda</option>
+              <option value="all">All Goa</option>
+              <option value="assagao">Assagao</option>
+              <option value="bardez">Bardez</option>
+              <option value="bicholim">Bicholim</option>
+              <option value="calangute">Calangute</option>
+              <option value="cancona">Cancona</option>
+              <option value="dharbandora">Dharbandora</option>
+              <option value="mapusa">Mapusa</option>
+              <option value="margao">Margao</option>
+              <option value="miramar">Miramar</option>
+              <option value="mormugao">Mormugao</option>
+              <option value="navelim">Navelim</option>
+              <option value="north">North District</option>
+              <option value="panajim">Panajim</option>
+              <option value="pernem">Pernem</option>
+              <option value="ponda">Ponda</option>
+              <option value="porvorim">Porvorim</option>
+              <option value="quepem">Quepem</option>
+              <option value="salcete">Salcete</option>
+              <option value="sanguem">Sanguem</option>
+              <option value="sattari">Sattari</option>
+              <option value="south">South District</option>
+              <option value="tiswadi">Tiswadi</option>
+              <option value="vasco">Vasco</option>
+              <option value="estevam">St. Estevam</option>
+              <option value="sangolda">Sangolda</option>
+          </select>
+        </div>
+        <div class="cell medium-8">
+
+            <h6>Filter by category</h6>
+
+            <div class="type-selection">
+                <input type="radio" name="type" id="all" checked value="all">
+                <label for="all"><img src="" alt="">All</label>
+
+                <input type="radio" name="type" id="animal" value="Animal Care">
+                <label for="animal"><img src="" alt="">Animal Care</label>
+
+                <input type="radio" name="type" id="shelter" value="Emergency Shelter">
+                <label for="shelter"><img src="" alt="">Emergency Shelter</label>
+
+                <input type="radio" name="type" id="complaint" value="Complaint">
+                <label for="complaint"><img src="" alt="">Complaint</label>
+
+                <input type="radio" name="type" id="bus" value="Food Bus">
+                <label for="bus"><img src="" alt="">Food Bus</label>
+
+                <!-- <input type="radio" name="type" id="food-helpline" value="food helpline">
+                <label for="food-helpline"><img src="img/kind.svg" alt="">Food Helpline</label> -->
+            </div>
+
+        </div>
+        </div>
+          <!-- <button id="filter" class="button">FILTER</button> -->
+      </div>
+  </section>
+
+    <!-- <section class="page">
         <div class="grid-container">
           <div class="grid-x grid-padding-x">
             <div class="cell large-12">
@@ -83,14 +158,161 @@
             </div>
           </div>
         </div>
-    </section>
+    </section> -->
+  <section class="content">
+      <div class="grid-container">
+          <ul id="contact-list" class="grid-x grid-padding-x">
+              <li class="cell medium-6" v-for="(contact,index) in list" :id="index">
+                <div class="wrap">
+                  <p class="shop-name"><img src="img/help.svg" alt="">
+                      {{contact.name}}
+                  </p>
+
+                  <div class="contact">
+                      <a target="_blank" :href="`tel:${contact.phone}`" ><span>{{contact.phone}}</span></a>
+                      <h6 class="type">
+                          <span class="type-inner" >
+                            {{contact.type}}
+                          </span>
+                          <!-- {{contact.type.join(", ")}} -->
+                      </h6>
+                  </div>
+                  <div class="other-info">
+                      <p class="call-whatsapp">
+                          <b>District: </b> {{contact.district}} 
+                      </p>
+                      <p class="location" title="Location"><img src="img/location.svg" alt="">{{contact.locations}}</p>
+                  </div>
+
+                  <!-- <h6 class="type">
+                    <span class="type-inner">
+                      {{contact.type}}
+                    </span>
+                  </h6> -->
+
+                  <a class="leave-feedback" target="_blank" data-open="feedback-modal" :data-link="`https://docs.google.com/forms/d/e/1FAIpQLScet8xoADXBEgVGVxBZOdIxiaYWaM6-OOWtVqEZnO2dXgaOmQ/viewform?usp=pp_url&entry.1929177201=${contact.shopName}&entry.1186530179=${contact.phone}`">Leave feedback</a>
+                </div><!-- Wrap -->
+              </li>
+              <li v-if="list.length === 0">
+                  <h2 class="text-center">No results found!</h2>
+                  <p class="text-center">To add information please
+                      <a style="color: blue; text-decoration: underline;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdIwhoXWbVNd6_ZIXTAV8lCkmLo_cwuZ8jVY6rkssdYJA4Upw/viewform?usp=sf_link">click here</a></p>
+              </li>
+          </ul>
+
+      </div>
+  </section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@5.0.10-beta/dist/fuse.min.js"></script>
-    <script src="js/app.js"></script>
     <script src="js/global.js"></script>
+    <script src="js/emergency_list.js"></script>
+    <script>
 
+      function handleEvents(e)
+      {
+              const type = document.querySelector("input[name='type']:checked").value;
+              // const district = document.querySelector("[name='district'] option:checked").value;
+              let options = {
+                  useExtendedSearch: true,
+                  threshold: 0,
+                  location: 0,
+                  distance: 100,
+                  minMatchCharLength: 1,
+                  keys: [
+                      "locations",
+                      "district"
+                  ]
+              };
+
+              // let districtOptions = {
+              //     // useExtendedSearch: true,
+              //     threshold: 0,
+              //     location: 0,
+              //     distance: 100,
+              //     minMatchCharLength: 1,
+              //     keys: [
+              //         "item.district",
+              //     ]
+              // };
+
+              let data = [...emergencyList];
+              let typeFiltered = "";
+              if(type != "all")
+              {
+                  typeFiltered = data.filter(function(element){
+                      if(element.type.includes(type))
+                      {
+                          return true;
+                      }
+
+                      return false;
+                  });
+              }
+              else
+              {
+                  typeFiltered = [...emergencyList];
+              }
+
+
+
+              var filteredData = new Fuse(typeFiltered,options);
+
+              var searchString = areas.value === 'nearby' ? '':areas.value;
+              var result = filteredData.search(`'${searchString}`)
+
+              // if(district=="")
+              // {
+                var finalResult = result.map(function(res){
+                  return res.item;
+                });
+
+                volunteers.list = [...finalResult];
+              //   return;
+              // }
+              // var districtFilteredData = new Fuse(result,districtOptions);
+
+              // var resultsWithDistrict = districtFilteredData.search(district);
+              
+              // var finalResult = resultsWithDistrict.map(function(res){
+              //     return res.item.item;
+              // });
+
+              // volunteers.list = [...finalResult];
+
+              // Check for nearbyAreas
+              // if ( areas.value === 'nearby' ) {
+              //   navigator.geolocation.getCurrentPosition(function (position) {
+              //     allDistances(position.coords.latitude, position.coords.longitude)
+              //     console.log(position.coords);
+              //     console.log(window.nearbyAreas);
+              //     var nearbyData = data.filter(function (d) {
+              //       return window.nearbyAreas.indexOf(d.area) > -1;
+              //     })
+              //     list.contactList = [...nearbyData];
+              //   })
+              // }
+      }
+
+      let volunteers = new Vue({
+        "el":".content",
+        data:{
+          list:[...emergencyList]
+        },
+        mounted()
+        {
+          // document.getElementById("district").addEventListener("change",handleEvents);
+          // Area
+          document.getElementById("areas").addEventListener("change",handleEvents);
+          //for radio buttons
+          let radios = document.querySelectorAll("input[name='type']");
+          radios.forEach(function(radio){
+            radio.addEventListener("click",handleEvents);
+          });
+        }
+      });
+    </script>
 
 </body>
 </html>
