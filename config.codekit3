@@ -510,6 +510,17 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/js/global-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/global-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/js/global.js": {
 		"bF": 0,
 		"ft": 64,
@@ -550,6 +561,17 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/js/nearby-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/js/sw-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/sw-min-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -613,6 +635,14 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
+		},
+	"/manifest.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/manifest-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
 		},
 	"/README.md": {
 		"cB": 0,

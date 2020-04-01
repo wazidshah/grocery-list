@@ -1,0 +1,20 @@
+{
+    "name": "Goa For You",
+    "short_name": "GoaForYou",
+    "start_url": "/index.html",
+    "icons": [
+        {
+            "src": "/icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#fbfdc9",
+    "background_color": "#fbfdc9",
+    "display": "standalone"
+}
