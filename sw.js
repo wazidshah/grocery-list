@@ -30,6 +30,10 @@ const assets = [
   '/js/app.js',
   '/js/main.js',
   '/js/global.js',
+  '/icons/android-chrome-192x192.png',
+  '/icons/favicon.ico',
+  '/icons/favicon-32x32.png',
+  '/icons/favicon-16x16.png',
 ];
 // install event
 self.addEventListener('install', evt => {
