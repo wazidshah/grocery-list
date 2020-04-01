@@ -1,7 +1,7 @@
 {
     "name": "Goa For You",
     "short_name": "GoaForYou",
-    "start_url": "/index.html",
+    "start_url": "/",
     "icons": [
         {
             "src": "/icons/android-chrome-192x192.png",
