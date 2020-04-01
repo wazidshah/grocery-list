@@ -488,17 +488,6 @@
 		"oAP": "/index.html",
 		"oF": 0
 		},
-	"/js/__data.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/js/__data-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"/js/app.js": {
 		"bF": 0,
 		"ft": 64,
@@ -517,17 +506,6 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/js/data-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/js/data_2.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/js/data_2-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -565,6 +543,28 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/js/nearby.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/nearby-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/js/sw.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/sw-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/js/v_location.js": {
 		"bF": 0,
 		"ft": 64,
@@ -575,6 +575,14 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"/js/village_location.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/js/village_location-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
 		},
 	"/js/volunteersData.js": {
 		"bF": 0,
